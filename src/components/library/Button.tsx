@@ -1,6 +1,26 @@
 import React from "react"
 import { twMerge } from "tailwind-merge"
 
+type PrimaryColors = {
+	bg?:string,
+	hoverbg?:string,
+	focusRing?: string
+}
+
+type SecondaryColors = {
+	text?:string,
+	hoverBorder?:string,
+	hoverBg?:string,
+	focusRing?:string
+}
+
+type TertiaryColors = {
+	text?:string,
+	hoverText?:string,
+	focusRing?:string
+}
+
+
 type BaseButtonProps = React.BaseHTMLAttributes<HTMLButtonElement>
 
 type ButtonProps = BaseButtonProps & {
@@ -15,7 +35,10 @@ const Button = ({ variant = "primary", ...porps }) => {
 		switch (variant) {
 			case "primary":
 				return "border border-transparent py-3 text-white bg-emerald-500 hover:bg-emerald-600 focus:ring-emerald-500"
-
+			case "secondary":
+				return "border-2 border-gray-200 py-[0.688rem] hover:text-white text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 focus:ring-emerald-500"
+			case "tertiary":
+				return "border border-transparent underline-offset-4 ring-offset-white hover:underline text-emerald-500 hover:text-emerald-700 focus:ring-emerald-500"
 			default:
 				return ""
 		}

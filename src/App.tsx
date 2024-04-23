@@ -15,7 +15,8 @@ const App = () => {
 					title="Primary"
 					description="Primary actions should be obvious, solid, high contrast background colors work great here"
 				>
-					<Button>Hello</Button>
+					<Button>Default Primary</Button>
+					<Button disabled>Disabled</Button>
 				</Section>
 
 				{/* Content section */}
@@ -23,8 +24,8 @@ const App = () => {
 					title="Secondary"
 					description="Secondary actions should be clear but not prominent. Outline styles or lower contrast background colors are great options"
 				>
-					<div className="bg-blue-500/50 p-3">component 1</div>
-					<div className="bg-blue-500/50 p-3">component 2</div>
+						<Button variant="secondary">Default Secondary</Button>
+						<Button variant="secondary" disabled>Default Secondary</Button>
 				</Section>
 
 				{/* Content section */}
@@ -32,8 +33,8 @@ const App = () => {
 					title="Tertiary"
 					description="Tertiary action should be discoverable but unobtrusive. Styling these actions like links is usually the best approach"
 				>
-					<div className="bg-blue-500/50 p-3">component 1</div>
-					<div className="bg-blue-500/50 p-3">component 2</div>
+					<Button variant="tertiary">Default Tertiary </Button>
+					<Button variant="tertiary" disabled>Default Tertiary </Button>
 				</Section>
 			</Container>
 
